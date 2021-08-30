@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+.logo {
+	background-color: #0b84e1;
+	padding: 0px 25px 8px 25px;
+	border-radius: 15px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo__title {
+	font-weight: bold;
+	font-size: 15pt;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	letter-spacing: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo__subtitle {
+	font-size: 12pt;
+	margin-top: -6px;
+	font-family: serif;
+	letter-spacing: 1px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar_light {
+	background-color: white !important;
+}
+.navbar_light__links {
+	color: black !important;
+	transition: ease 0.5s;
+}
+.navbar_light__links:hover {
+	color: white !important;
+	background-color: cornflowerblue;
+	border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.c-item {
+	height: 400px !important;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.c-item img {
+	height: 400px !important;
+	border-radius: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width: 600px) {
+	.c-item {
+		height: 200px !important;
+	}
+	.c-item img {
+		height: 200px !important;
+	}
+
+	.inicio {
+		height: 100vh;
+		display: flex;
+		flex-direction: column !important;
+	}
+	.inicio__left-content {
+		width: 100% !important;
+	}
+	.inicio__rigth-content {
+		width: 100% !important;
+	}
+}
+
+.inicio {
+	height: 100vh;
+	display: flex;
+}
+
+.inicio__left-content {
+	width: 40%;
+}
+.inicio__left-content h1 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: bold;
+}
+.inicio__rigth-content {
+	width: 60%;
+}
+
+.comidas {
+	height: 400px;
+	background-color: red;
+}
+
+.precios {
+	height: 100vh;
+	background-color: blue;
+}
+.acerca {
+	height: 500px;
+	background-color: aqua;
+}
+.contacto {
+	height: 300px;
+	background-color: blueviolet;
+}
+
+html {
+	scroll-behavior: smooth;
 }
