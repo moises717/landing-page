@@ -1,5 +1,9 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+html {
+	scroll-behavior: smooth;
+}
+
 .logo {
 	background-color: #0b84e1;
 	padding: 0px 25px 8px 25px;
@@ -48,10 +52,10 @@
 
 @media (max-width: 600px) {
 	.c-item {
-		height: 200px !important;
+		height: 300px !important;
 	}
 	.c-item img {
-		height: 200px !important;
+		height: 300px !important;
 	}
 
 	.inicio {
@@ -64,16 +68,28 @@
 	}
 	.inicio__rigth-content {
 		width: 100% !important;
+		margin-top: 30px;
+	}
+	.inicio__left-content-footer {
+		margin-top: 5px;
 	}
 }
 
 .inicio {
-	height: 100vh;
+	height: 550px;
+	margin-top: 30px;
 	display: flex;
 }
 
 .inicio__left-content {
 	width: 40%;
+	display: flex;
+	flex-direction: column;
+}
+
+.inicio__left-content-footer {
+	display: flex;
+	flex-direction: column;
 }
 .inicio__left-content h1 {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -84,23 +100,28 @@
 }
 
 .comidas {
-	height: 400px;
-	background-color: red;
+	min-height: 100vh;
 }
 
 .precios {
 	height: 100vh;
-	background-color: blue;
 }
 .acerca {
-	height: 500px;
-	background-color: aqua;
+	height: 100vh;
 }
 .contacto {
-	height: 300px;
-	background-color: blueviolet;
+	height: 100vh;
+}
+.title-section {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	font-weight: bold;
 }
 
-html {
-	scroll-behavior: smooth;
+.inicio__contact-title {
+	margin-top: 20px;
+	font-family: sans-serif;
+}
+
+.navbar_light {
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }

@@ -1,32 +1,34 @@
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import Carousel from "react-bootstrap/Carousel";
-import img1 from "./assets/img/1.jpg";
-import img2 from "./assets/img/2.jpg";
-import img3 from "./assets/img/4.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+	faUtensils,
+	faBars,
+	faDollarSign,
+	faIdCard,
+	faExclamation,
+} from "@fortawesome/free-solid-svg-icons";
+
+import { Menu } from "./components/Menu";
+import { Inicio } from "./components/Inicio";
 
 import "./App.css";
 
 function App() {
 	const handleScrollClick = (e) => {
+		console.log(e);
 		e.preventDefault();
 		const target = e.target.getAttribute("href");
-		const location = document.querySelector(target).offsetTop;
-		console.log(target);
-		window.scrollTo({
-			left: 0,
-			top: location - 66,
-		});
-	};
-	const handleScrollClickTop = (e) => {
-		e.preventDefault();
+
+		const location = document.querySelector(target);
 
 		window.scrollTo({
 			left: 0,
-			top: 0,
+			top: location !== null ? location.offsetTop - 66 : 0,
 		});
 	};
+
 	return (
 		<>
 			<Navbar
@@ -37,11 +39,15 @@ function App() {
 				bg="light"
 				variant="light">
 				<Container>
-					<Navbar.Brand href="#inicio" onClick={handleScrollClickTop}>
-						<div className="logo">
-							<span className="logo__title">PUPUSAS</span>
-							<small className="logo__subtitle">La gran sultana</small>
-						</div>
+					<Navbar.Brand>
+						<Nav.Link href="#inicio" onClick={handleScrollClick}>
+							<div className="logo">
+								<span className="logo__title">
+									PUPUSAS <FontAwesomeIcon icon={faUtensils} />
+								</span>
+								<small className="logo__subtitle">La gran sultana</small>
+							</div>
+						</Nav.Link>
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse id="responsive-navbar-nav">
@@ -50,27 +56,28 @@ function App() {
 								href="#comidas"
 								onClick={handleScrollClick}
 								className="navbar_light__links">
-								Comidas
+								Menu <FontAwesomeIcon icon={faBars} />
 							</Nav.Link>
 							<Nav.Link
 								href="#precios"
 								className="navbar_light__links"
 								onClick={handleScrollClick}>
-								Precios
+								Precios <FontAwesomeIcon icon={faDollarSign} />
 							</Nav.Link>
 						</Nav>
 						<Nav>
 							<Nav.Link
-								href="#deets"
+								href="#acerca"
 								className="navbar_light__links"
 								onClick={handleScrollClick}>
-								Acerca
+								Acerca <FontAwesomeIcon icon={faExclamation} />
 							</Nav.Link>
 							<Nav.Link
 								eventKey={2}
-								href="#memes"
+								href="#contacto"
+								onClick={handleScrollClick}
 								className="navbar_light__links">
-								Contacto
+								Contacto <FontAwesomeIcon icon={faIdCard} />
 							</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
@@ -79,30 +86,10 @@ function App() {
 
 			<Container>
 				<section className="inicio" id="inicio">
-					<div className="inicio__left-content">
-						<h1>Las mejores pupusas del pais</h1>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-						quisquam doloribus obcaecati quam in consequuntur repellat aut
-						cumque itaque nam repellendus, nemo doloremque voluptatibus eveniet
-						vel ipsum quaerat! Sint, mollitia.
-					</div>
-
-					<div className="inicio__rigth-content">
-						<Carousel>
-							<Carousel.Item className="c-item">
-								<img className="d-block w-100" src={img1} alt="First slide" />
-							</Carousel.Item>
-							<Carousel.Item className="c-item">
-								<img className="d-block w-100" src={img2} alt="Second slide" />
-							</Carousel.Item>
-							<Carousel.Item className="c-item">
-								<img className="d-block w-100" src={img3} alt="Third slide" />
-							</Carousel.Item>
-						</Carousel>
-					</div>
+					<Inicio />
 				</section>
 				<section className="comidas" id="comidas">
-					hola
+					<Menu />
 				</section>
 				<section className="precios" id="precios"></section>
 				<section className="acerca" id="acerca"></section>
