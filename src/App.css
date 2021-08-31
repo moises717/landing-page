@@ -50,28 +50,38 @@ html {
 	border-radius: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 	.c-item {
-		height: 300px !important;
+		height: 250px !important;
 	}
 	.c-item img {
-		height: 300px !important;
+		height: 250px !important;
+		width: 100% !important;
 	}
 
 	.inicio {
-		height: 100vh;
+		min-height: 100vh;
 		display: flex;
 		flex-direction: column !important;
 	}
+
 	.inicio__left-content {
 		width: 100% !important;
 	}
 	.inicio__rigth-content {
 		width: 100% !important;
-		margin-top: 30px;
 	}
-	.inicio__left-content-footer {
-		margin-top: 5px;
+
+	.precios__items {
+		display: flex;
+		flex-direction: column !important;
+	}
+
+	.precios__items-left {
+		width: 100% !important;
+	}
+	.precios__items-right {
+		width: 100% !important;
 	}
 }
 
@@ -85,6 +95,7 @@ html {
 	width: 40%;
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 20px;
 }
 
 .inicio__left-content-footer {
@@ -104,24 +115,67 @@ html {
 }
 
 .precios {
-	height: 100vh;
+	min-height: calc(100vh - 200px);
+	margin-top: 10px;
+}
+
+.precios-container {
+	background-color: #1b4332;
+	height: 100%;
+	border-radius: 15px;
+
+	color: white;
+}
+
+.precios__items {
+	width: 95%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
 }
 .acerca {
-	height: 100vh;
+	margin-top: 30px;
+	min-height: 400px;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .contacto {
-	height: 100vh;
+	min-height: 100vh;
 }
 .title-section {
 	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 	font-weight: bold;
+	color: rgb(56, 55, 55);
 }
 
 .inicio__contact-title {
 	margin-top: 20px;
+
 	font-family: sans-serif;
 }
 
 .navbar_light {
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.img-thumnail {
+	max-height: 330px !important;
+}
+.precios__items-left {
+	width: 50%;
+}
+.precios__items-right {
+	width: 50%;
+}
+
+.whatsapp {
+	width: 150px;
+	background-color: #25d366;
+	color: #fff;
+	border-radius: 50px;
+	text-align: center;
+	font-size: 20px;
+	text-decoration: none;
+}
+.whatsapp:hover {
+	color: white;
 }

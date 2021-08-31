@@ -4,7 +4,6 @@ import Nav from "react-bootstrap/Nav";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faUtensils,
-	faBars,
 	faDollarSign,
 	faIdCard,
 	faExclamation,
@@ -14,10 +13,10 @@ import { Menu } from "./components/Menu";
 import { Inicio } from "./components/Inicio";
 
 import "./App.css";
+import Precios from "./components/Precios";
 
 function App() {
 	const handleScrollClick = (e) => {
-		console.log(e);
 		e.preventDefault();
 		const target = e.target.getAttribute("href");
 
@@ -25,7 +24,7 @@ function App() {
 
 		window.scrollTo({
 			left: 0,
-			top: location !== null ? location.offsetTop - 66 : 0,
+			top: location !== null ? location.offsetTop - 100 : 0,
 		});
 	};
 
@@ -56,7 +55,7 @@ function App() {
 								href="#comidas"
 								onClick={handleScrollClick}
 								className="navbar_light__links">
-								Menu <FontAwesomeIcon icon={faBars} />
+								Platillos <FontAwesomeIcon icon={faUtensils} />
 							</Nav.Link>
 							<Nav.Link
 								href="#precios"
@@ -70,14 +69,7 @@ function App() {
 								href="#acerca"
 								className="navbar_light__links"
 								onClick={handleScrollClick}>
-								Acerca <FontAwesomeIcon icon={faExclamation} />
-							</Nav.Link>
-							<Nav.Link
-								eventKey={2}
-								href="#contacto"
-								onClick={handleScrollClick}
-								className="navbar_light__links">
-								Contacto <FontAwesomeIcon icon={faIdCard} />
+								Acerca de nosostros <FontAwesomeIcon icon={faExclamation} />
 							</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
@@ -91,9 +83,12 @@ function App() {
 				<section className="comidas" id="comidas">
 					<Menu />
 				</section>
-				<section className="precios" id="precios"></section>
+				<section className="precios" id="precios">
+					<Precios />
+				</section>
+			</Container>
+			<Container fluid>
 				<section className="acerca" id="acerca"></section>
-				<section className="contacto" id="contacto"></section>
 			</Container>
 		</>
 	);
