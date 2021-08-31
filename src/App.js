@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faUtensils,
 	faDollarSign,
-	faIdCard,
 	faExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 
