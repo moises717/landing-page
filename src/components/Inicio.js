@@ -7,19 +7,19 @@ import img2 from "../assets/img/1.jpg";
 import img3 from "../assets/img/2.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 
 export const Inicio = () => {
 	return (
 		<>
 			<div className="inicio__left-content">
 				<h1>Las mejores pupusas del pais</h1>
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-				quisquam doloribus obcaecati quam in consequuntur repellat aut cumque
-				itaque nam repellendus, nemo doloremque voluptatibus eveniet vel ipsum
-				quaerat! Sint, mollitia.
+				Pupusas la gran sultana antojitos y mas, Siempre con una atencion
+				personalizada garantizando higiene, calidad y frescura.
 				<div className="inicio__left-content-footer">
-					<h4 className="inicio__contact-title">Pedidos a</h4>
+					<h4 className="inicio__contact-title">Pedidos a </h4>
+					<small>Solo disponibles en granada y masaya.</small>
+					<br />
 					<span>
 						{" "}
 						{<FontAwesomeIcon icon={faPhone} />} 85871053{" "}
@@ -34,9 +34,18 @@ export const Inicio = () => {
 					<a
 						className="whatsapp"
 						href="https://wa.me/50585871053"
-						target="_blank">
+						target="_blank"
+						rel="noreferrer">
 						WhatsApp
 					</a>{" "}
+					<br />
+					<b>
+						<FontAwesomeIcon icon={faLocationArrow} /> Ubicados
+					</b>
+					<ul>
+						<li>Masaya frente ha maxi pali, food park masaya.</li>
+						<li>Granada, plaza comercial contigo al nuevo edificio inss.</li>
+					</ul>
 				</div>
 			</div>
 

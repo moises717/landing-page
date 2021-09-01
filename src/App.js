@@ -13,6 +13,7 @@ import { Inicio } from "./components/Inicio";
 
 import "./App.css";
 import Precios from "./components/Precios";
+import { Acerca } from "./components/Acerca";
 
 function App() {
 	const handleScrollClick = (e) => {
@@ -87,7 +88,9 @@ function App() {
 				</section>
 			</Container>
 			<Container fluid>
-				<section className="acerca" id="acerca"></section>
+				<section className="acerca" id="acerca">
+					<Acerca />
+				</section>
 			</Container>
 		</>
 	);
