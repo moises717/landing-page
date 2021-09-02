@@ -103,6 +103,11 @@ html {
 		margin-top: 150px !important;
 	}
 }
+@media (max-width: 600px) {
+	.comidas {
+		margin-top: 200px !important;
+	}
+}
 
 .inicio {
 	height: 550px;
