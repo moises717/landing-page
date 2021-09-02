@@ -94,6 +94,14 @@ html {
 		display: flex !important;
 		flex-direction: column !important;
 	}
+	.comidas {
+		margin-top: 150px !important;
+	}
+}
+@media (max-width: 980px) {
+	.comidas {
+		margin-top: 150px !important;
+	}
 }
 
 .inicio {
